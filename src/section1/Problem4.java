@@ -21,7 +21,7 @@ public class Problem4 {
         Instant start = Instant.now();
         int largest = 0;
         for (int i = 100; i < 1000 ; i++) {
-            for (int j = 100; j < 1000; j++) {
+            for (int j = i; j < 1000; j++) {
                 int num = i * j;
                 if (isPalindromic(num) && num > largest) {
                     largest = num;
