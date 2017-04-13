@@ -1,5 +1,7 @@
 package section1;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,7 +37,7 @@ public class Problem19 {
         int month = 1;
         int year = 1900;
         int count = 0;
-
+        Instant start = Instant.now();
         while (year < 2001){
             day += 7;
             if(day > dict.get(month)){
@@ -72,7 +74,10 @@ public class Problem19 {
         }
 
         System.out.println("count = "+count);
+        Instant end = Instant.now();
 
+        Duration elapsed = Duration.between(start,end);
+        System.out.println("elapsed : "+elapsed.toMillis()+" millisecond(s)");
 
 
     }
